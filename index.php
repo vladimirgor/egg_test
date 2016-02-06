@@ -115,30 +115,30 @@ if ( !empty($_POST) ) {
 <div class="container">
     <form class="form-horizontal" method="post"
           onsubmit="return checkFilter_choosing();">
-        <div class="form-group">
-            <label for="inputName" class="col-sm-2 control-label">For</label>
+
+        <div class="form-group"><b>For</b><br>
             <div class="col-sm-8">
-                <input type="text" required class="form-control" id="inputName"
+                <input type="text" required class="form-control"
                        name ="name" pattern="^[A-Z][a-z]+\s[A-Z][a-z]+" placeholder="Name">
             </div>
         </div>
 
-        <div class="form-group"><b>Find</b><Br>
+        <div class="form-group"><b>Find</b><br>
             <input type="radio" name="filter" value="managers">Managers<Br>
             <input type="radio" name="filter" value="employees">Employees<Br>
         </div>
 
-        <input type = "hidden" name = "session_id" id = "session"
+        <input type = "hidden" name = "session_id" 
                value="<?php echo session_id();?>">
 
         <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
+            <div class="col-sm-8">
                 <button type="reset" class="btn btn-danger">Clear</button>
             </div>
         </div>
 
         <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
+            <div class=" col-sm-8">
                 <button type="submit"  class="btn btn-success">Sent</button>
             </div>
         </div>
