@@ -119,7 +119,7 @@ if ( !empty($_POST) ) {
         <div class="form-group"><b>For</b><br>
             <div class="col-sm-8">
                 <input type="text" required class="form-control"
-                       name ="name" pattern="^[A-Z][a-z]+\s[A-Z][a-z]+" placeholder="Name">
+                       name ="name" pattern="^[A-ZА-Я][a-zа-я]+\s[A-ZА-Я][a-zа-я]+" placeholder="Name">
             </div>
         </div>
 
@@ -128,7 +128,7 @@ if ( !empty($_POST) ) {
             <input type="radio" name="filter" value="employees">Employees<Br>
         </div>
 
-        <input type = "hidden" name = "session_id" 
+        <input type = "hidden" name = "session_id"
                value="<?php echo session_id();?>">
 
         <div class="form-group">
