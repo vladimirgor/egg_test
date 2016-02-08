@@ -120,6 +120,7 @@ if ( !empty($_POST) ) {
             <div class="col-sm-8">
                 <input type="text" required class="form-control"
                        name ="name" pattern="^[A-ZА-Я][a-zа-я]+\s[A-ZА-Я][a-zа-я]+" placeholder="Name">
+                <?php if (!empty($_POST)): ?>You have sent name: <?=$name?><?php endif; ?>
             </div>
         </div>
 
@@ -127,7 +128,7 @@ if ( !empty($_POST) ) {
             <input type="radio" name="filter" value="managers">Managers<Br>
             <input type="radio" name="filter" value="employees">Employees<Br>
         </div>
-
+        <?php if (!empty($_POST)): ?>You have sent to find: <?=$_POST['filter']?><?php endif; ?>
         <input type = "hidden" name = "session_id"
                value="<?php echo session_id();?>">
 
@@ -139,7 +140,7 @@ if ( !empty($_POST) ) {
 
         <div class="form-group">
             <div class=" col-sm-8">
-                <button type="submit"  class="btn btn-success">Sent</button>
+                <button type="submit"  class="btn btn-success">Send</button>
             </div>
         </div>
     </form>
