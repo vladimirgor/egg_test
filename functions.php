@@ -18,7 +18,7 @@ function dbConnection()
 //log
         echo 'Something went wrong. Please, apply to system administrator.';
         error_log( date('Y-m-d H:i:s') . ' - Connection error: ' . $e->getMessage()
-            . PHP_EOL,3,__DIR__ . '/message_log');
+            . PHP_EOL,3,__DIR__ . '/' . LOG);
         die;
     }
 }
